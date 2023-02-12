@@ -2,3 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .text-border{
+    -webkit-text-stroke: 0.2px black;
+} */
+/* 
+body{
+    background-image: url('/public/hero_banner.jpg');
+    filter: blur(6px);
+    -webkit-filter: blur(8px);
+} */
+
+body, html {
+    height: 100%;
+  }
+  
+* {
+    box-sizing: border-box;
+}
+
+
+.texture{
+    background-image: url('/hero_banner.jpg');
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home{
+    animation-delay: 0.2s;
+}
+
+.about{
+    animation-delay: 0.4s;
+}
+
+
+.login{
+    animation-delay: 0.5s;
+    
+}
+
+
+
+.landing-title-animation-delay{
+    opacity: 0;
+    animation-delay : 0.8s;
+}
+.landing-content-animation-delay{
+    opacity: 0;
+    animation-delay : 1s;
+}
+
+
+.hamburger-menu{
+    animation-duration: 0.3s;
+    background: rgba(30, 41, 59, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+
+.landing-button{
+    opacity: 0;
+    border:1px solid #75E6DA;
+    transition: all 0.3s;
+    animation-delay: 1.4s;
+}
+
+.landing-button:hover{
+    border:1px solid white;
+    color : white;
+    background-color: transparent;
+
+}
+.landing-button:active{
+    border:1px solid white;
+    color : white;
+    background-color: transparent;
+
+}
+
+
+.icons{
+    width: 24px;
+    height: 24px;
+    transition: width 0.5s;
+}
+.icons:hover{
+    width:40px;
+    height:40px;
+}
+
+
+.bi-youtube{
+    animation-delay: 0.8s;
+}
+
+.bi-linkedin{
+    animation-delay: 1s;
+    
+}
+.bi-github{
+    animation-delay: 1.2s;
+
+}
+
+.bi-discord{
+    animation-delay: 1.3s
+}

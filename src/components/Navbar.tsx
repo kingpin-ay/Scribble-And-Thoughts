@@ -10,39 +10,43 @@ export default function Navbar() {
     };
     
   return (
-    <div className='flex justify-between px-10 py-5 '>
+    <div className='flex justify-between px-10 py-5 w-[100%] items-end fixed top-0 left-0 right-0'>
         <NavLink to="/" className='
+        max-[600px]:animate-none
+        animate-slide-in-down
+        tablet:opacity-0
         text-[18px]
         flex-6 
-        md:text-xl 
-        font-mono 
+        tablet:text-2xl 
+        font-body 
         font-bold 
-        text-slate-600
-        hover:text-slate-900 transition duration-300 cursor-pointer'>Scribble <span className='text-sm text-yellow-900'>And</span> Thought</NavLink>
+        text-blue-green
+        hover:text-white transition duration-300 cursor-pointer'>Scribble <span className='text-sm text-white hover:text-blue-green transition duration-300 cursor-pointer text-border'>And</span> Thought</NavLink>
         
 
 
-        <div className='hidden md:flex flex-9 w-64  justify-end font-bold text-slate-600 my-0.5 '>
-            <NavLink className="flex-1 hover:text-stone-800 transition duration-300 cursor-pointer" to="/">HOME</NavLink>
-            <NavLink className="flex-1 hover:text-stone-800 transition duration-300 cursor-pointer" to="/about">ABOUT</NavLink>
-            <NavLink className="flex-1 hover:text-stone-800 transition duration-300 cursor-pointer" to="/login">LOG-IN</NavLink>
+        <div className='hidden tablet:flex flex-9 w-64  justify-end font-bold text-blue-green my-0.5 '>
+            <NavLink className="flex-1 hover:text-white opacity-0 transition duration-300 cursor-pointer animate-slide-in-down home" to="/">HOME</NavLink>
+            <NavLink className="flex-1 hover:text-white opacity-0 transition duration-300 cursor-pointer animate-slide-in-down about" to="/about">ABOUT</NavLink>
+            <NavLink className="flex-1 hover:text-white opacity-0 transition duration-300 cursor-pointer animate-slide-in-down login" to="/login">LOG-IN</NavLink>
         </div>
 
 
-        <div className={`md:hidden flex items-center ${isClicked ? "hidden" : ""}`}>
-            <button className ="outline-none menu-button" onClick={clickHandler}>
-                <svg className="w-6 h-6 text-gray-500"
-                x-show="! showMenu"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 00 24 24"
-                stroke="currentColor"><path d="m4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </div>
+        
+            <div className={`tablet:hidden flex items-center ${isClicked ? "hidden" : ""}`}>
+                <button className ="outline-none menu-button " onClick={clickHandler}>
+                    <svg className="w-6 h-6 text-white"
+                    x-show="! showMenu"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 00 24 24"
+                    stroke="currentColor"><path d="m4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
 
-        <div className={`max-h-screen absolute right-0 top-0 bottom-0 w-64 bg-slate-800/90 ${isClicked ? "" : "hidden"}`}>
+        <div className={`h-screen fixed right-0 top-0 bottom-0 w-64 bg-slate-800/90  hamburger-menu ${isClicked ? "animate-slide-in-left " : "hidden"}`}>
             
             <button className ="outline-none menu-button border-b-white font-mono text-white float-right my-5 mx-5" onClick={clickHandler}>
                 Close &#62;
