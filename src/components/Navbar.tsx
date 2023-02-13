@@ -8,9 +8,20 @@ export default function Navbar() {
     const clickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
         setIsClicked(prev => !prev);
     };
-    
+
+
+    const [colorChange, setColorchange] = useState(false);
+    const changeNavbarColor = () =>{
+        if(window.scrollY >= 80){
+        setColorchange(true);
+        }
+        else{
+        setColorchange(false);
+        }
+    };
+    window.addEventListener('scroll', changeNavbarColor);
   return (
-    <div className='flex justify-between px-10 py-5 w-[100%] items-end fixed top-0 left-0 right-0'>
+    <div className={`flex justify-between px-10 py-5 w-[100%] items-end fixed top-0 left-0 right-0 ${colorChange ? 'nav-background' : ''}`}>
         <NavLink to="/" className='
         max-[600px]:animate-none
         animate-slide-in-down
@@ -20,22 +31,22 @@ export default function Navbar() {
         tablet:text-2xl 
         font-body 
         font-bold 
-        text-blue-green
-        hover:text-white transition duration-300 cursor-pointer'>Scribble <span className='text-sm text-white hover:text-blue-green transition duration-300 cursor-pointer text-border'>And</span> Thought</NavLink>
+        text-navy-blue
+        hover:text-mirage transition duration-300 cursor-pointer'>Scribble <span className='text-sm text-white hover:text-navy-blue transition duration-300 cursor-pointer text-border'>And</span> Thought</NavLink>
         
 
 
-        <div className='hidden tablet:flex flex-9 w-64  justify-end font-bold text-blue-green my-0.5 '>
-            <NavLink className="flex-1 hover:text-white opacity-0 transition duration-300 cursor-pointer animate-slide-in-down home" to="/">HOME</NavLink>
-            <NavLink className="flex-1 hover:text-white opacity-0 transition duration-300 cursor-pointer animate-slide-in-down about" to="/about">ABOUT</NavLink>
-            <NavLink className="flex-1 hover:text-white opacity-0 transition duration-300 cursor-pointer animate-slide-in-down login" to="/login">LOG-IN</NavLink>
+        <div className='hidden tablet:flex flex-9 w-64  justify-end font-bold text-navy-blue my-0.5 '>
+            <NavLink className="flex-1 hover:text-mirage opacity-0 transition duration-300 cursor-pointer animate-slide-in-down home" to="/">HOME</NavLink>
+            <NavLink className="flex-1 hover:text-mirage opacity-0 transition duration-300 cursor-pointer animate-slide-in-down about" to="/about">ABOUT</NavLink>
+            <NavLink className="flex-1 hover:text-mirage opacity-0 transition duration-300 cursor-pointer animate-slide-in-down login" to="/login">LOG-IN</NavLink>
         </div>
 
 
         
             <div className={`tablet:hidden flex items-center ${isClicked ? "hidden" : ""}`}>
                 <button className ="outline-none menu-button " onClick={clickHandler}>
-                    <svg className="w-6 h-6 text-white"
+                    <svg className="w-6 h-6 text-navy-blue"
                     x-show="! showMenu"
                     fill="none"
                     stroke-linecap="round"

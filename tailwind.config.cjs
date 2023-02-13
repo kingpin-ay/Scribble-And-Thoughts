@@ -11,7 +11,7 @@ module.exports = {
     },
     screens: {
       
-      'tablet': '640px',
+      'tablet': '600px',
       // => @media (min-width: 640px) { ... }
 
       'laptop': '1024px',
@@ -23,15 +23,17 @@ module.exports = {
     extend: {
       backgroundImage: {
         'the-plant': "url('/hero_banner.jpg')",
-        'samurai': "url('/samurai.jpg')",
-        'mecha-world' : "url('/mecha_world.jpg')"
+        'about-cover': "url('/about_cover.jpg')",
+        'pixil-art-house' : "url('/pixil_art_house.jpg')",
+        'pixil-forest' : "url('/pink_forest.png')"
       },
       colors: {
         'baby-blue': '#D4F1F4',
         'blue-green': '#75E6DA',
         'blue-grotto': '#189AB4',
         'navy-blue' : '#05445E',
-        'viking': '#5BB5DE',
+        'viking': '#5BB5DE', 
+        'viking-lite': '#E1E2DA' ,
         'blue-violet': '#5D4FB2',
         'brandy-rose': '#BD9581',
         'mirage' : '#1C152A',

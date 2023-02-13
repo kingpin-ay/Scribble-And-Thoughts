@@ -13,6 +13,7 @@ body{
 } */
 
 body, html {
+    margin: 0px;
     height: 100%;
   }
   
@@ -22,7 +23,7 @@ body, html {
 
 
 .texture{
-    background-image: url('/hero_banner.jpg');
+    /* background-image: url('/hero_banner.jpg'); */
     height: 100%;
 
     background-repeat: no-repeat;
@@ -111,3 +112,21 @@ body, html {
 .bi-discord{
     animation-delay: 1.3s
 }
+
+
+.nav-background{
+    background: rgba(30, 41, 59, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+
+.scrollhide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollhide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  /* added to the body element */
