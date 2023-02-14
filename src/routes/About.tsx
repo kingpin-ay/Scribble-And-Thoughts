@@ -1,5 +1,9 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import ContactMe from "../components/ContactMe";
+import ExperienceCard from "../components/ExperienceCard";
+import Features from "../components/Features";
 import TechDescription from "../components/TechDescription";
+import content from "../variables/futureContent";
 
 export default function About() {
 
@@ -64,12 +68,27 @@ export default function About() {
             <TechDescription title={tech.ai.title} obj={tech.ai.obj} content={tech.ai.content}/>
           </Box>
 
-          <Box marginTop={10}>
-            Experience
-          </Box>
+          
+          <ExperienceCard/>          
+         <Features 
+          title={content.decentralizedChat.title}
+          contentOne={content.decentralizedChat.contentOne}
+          contentTwo={content.decentralizedChat.contentTwo}
+          security={content.decentralizedChat.security} 
+          securityTag={content.decentralizedChat.securityTag}
+          performanceTag = {content.decentralizedChat.performanceTag}
+          performance = {content.decentralizedChat.Performance}
+          rewardTag = {content.decentralizedChat.rewardTag}
+          reward = {content.decentralizedChat.reward}
+          userTag = {content.decentralizedChat.userTag}
+          user = {content.decentralizedChat.user}
+          /> 
+        <ContactMe />
           
         </Container>
       </div>
+
+      
 
 
     </>

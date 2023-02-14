@@ -21,7 +21,7 @@ export default function Navbar() {
     };
     window.addEventListener('scroll', changeNavbarColor);
   return (
-    <div className={`flex justify-between px-10 py-5 w-[100%] items-end fixed top-0 left-0 right-0 ${colorChange ? 'nav-background' : ''}`}>
+    <div className={`flex justify-between px-10 py-5 w-[100%] items-end fixed top-0 left-0 right-0 ${colorChange ? 'nav-background z-50' : ''}`}>
         <NavLink to="/" className='
         max-[600px]:animate-none
         animate-slide-in-down
@@ -57,7 +57,7 @@ export default function Navbar() {
                 </button>
             </div>
 
-        <div className={`h-screen fixed right-0 top-0 bottom-0 w-64 bg-slate-800/90  hamburger-menu ${isClicked ? "animate-slide-in-left " : "hidden"}`}>
+        <div className={`h-screen fixed right-0 top-0 bottom-0 w-64 bg-slate-800/90  hamburger-menu ${isClicked ? "animate-slide-in-left " : "hidden"} `}>
             
             <button className ="outline-none menu-button border-b-white font-mono text-white float-right my-5 mx-5" onClick={clickHandler}>
                 Close &#62;
