@@ -25,7 +25,7 @@ module.exports = {
         'the-plant': "url('/hero_banner.jpg')",
         'about-cover': "url('/about_cover.jpg')",
         'pixil-art-house' : "url('/pixil_art_house.jpg')",
-        'pixil-forest' : "url('/pink_forest.png')",
+        'pixil-sunset' : "url('/sunset.png')",
         'exp-letter': "url('/experience_mgteh.jpg')"
       },
       colors: {
