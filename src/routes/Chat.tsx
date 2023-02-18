@@ -101,7 +101,7 @@ const Chat = () => {
 
       <Box>
         <Text>Your : </Text>
-        <video ref={currentVideoRef} />
+        <video ref={currentVideoRef} muted/>
       </Box>
       <Box>
         <Text>Member : </Text>
